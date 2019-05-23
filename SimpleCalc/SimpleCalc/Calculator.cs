@@ -8,7 +8,8 @@ namespace SimpleCalc
 {
 	public class Calculator
 	{
-
+        public Calculator()
+        { }
 		//Declare a private backing field for the first number
 		private double _number1;
 
@@ -32,25 +33,30 @@ namespace SimpleCalc
 		//Create a method to add the two numbers
 		public double Add()
 		{
-			throw new NotImplementedException();
+            return Number1 + Number2;
 		}
 
 		//Create a method to subtract the two numbers
 		public double Subtract()
 		{
-			throw new NotImplementedException();
-		}
+            return Number1 - Number2;
+        }
 
 		//Create a method to multiply the two numbers
 		public double Multiply()
 		{
-			throw new NotImplementedException();
-		}
+            return Number1 * Number2;
+        }
 
 		//Create a method to divide the two numbers
 		public double Divide()
 		{
-			throw new NotImplementedException();
-		}
+            if (Number2 == 0)
+            {
+                throw new DivideByZeroException();
+            }
+
+            return Number1 / Number2;
+        }
 	}
 }
